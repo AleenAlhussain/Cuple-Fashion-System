@@ -1,0 +1,379 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Multikart - Online Marketplace, Vendor Collaboration, E-commerce Platform
+    Template URI: https://themes.pixelstrap.net/multikart
+    Description: Online Marketplace, Vendor Collaboration, E-commerce Platform
+    Author: Pixelstrap
+    Author URL: https://themeforest.net/user/pixelstrap
+
+----------------------------------------------------------------------------------- */
+///* Utils Files  *////
+/* 1.1 Variable css  */
+/* 1.2 Animate css  */
+/* 1.3 Breakpoints css  */
+
+////* Base Files  *////
+/* 2.1 Typography css  */
+/* 2.2 Reset css */
+
+////* Components Files  *////
+/* 3.1 Animation css  */
+/* 3.2 Country-flag css  */
+/* 3.3 Form css  */
+/* 3.4 Button css  */
+/* 3.5 Ratio css  */
+/* 3.6 Timer css */
+/* 3.7 Title css */
+/* 3.8 Theme-tab css */
+
+////* Layout Files  *////
+/* 4.1 Ajax-search css */
+/* 4.2 Banner css */
+/* 4.3 Blog css */
+/* 4.4 Cart css */
+/* 4.5 Category css */
+/* 4.6 Demo css */
+/* 4.7 Footer css */
+/* 4.8 Header css */
+/* 4.9 Home-slider css */
+/* 4.10 Instagram css */
+/* 4.11 Loader css */
+/* 4.12 Menu-2 css */
+/* 4.13 Menu css */
+/* 4.14 Modal css */
+/* 4.15 Other css */
+/* 4.16 Portfolio css */
+/* 4.17 Product-box css */
+/* 4.18 Service css */
+/* 4.19 Slider css */
+/* 4.21 Tap-top css */
+
+////* Pages Files  *////
+/* 5.1 Inner-page css */
+/* 5.2 Offer css */
+
+////* Themes Files  *////
+/* 6.1 Theme-setting css */
+/* 6.2 Rtl css */
+/* 6.3 Dark css */
+/* 6.4 Responsive css */
+
+/* utils */
+@import "utils/variables";
+@import "utils/mixins";
+@import "vendors/animate.scss";
+
+/* base */
+@import "base/typography";
+@import "base/reset";
+
+/* components */
+@import "components/animation";
+@import "components/button";
+@import "components/confetti";
+@import "components/country-flag";
+@import "components/form";
+@import "components/ratio";
+@import "components/slick-slider";
+@import "components/theme-tab";
+@import "components/timer";
+@import "components/title";
+
+/* layout */
+@import "layout/ajax-search";
+@import "layout/banner";
+@import "layout/blog";
+@import "layout/cart";
+@import "layout/category";
+@import "layout/collection";
+@import "layout/demo";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/home-slider";
+@import "layout/instagram";
+@import "layout/loader";
+@import "layout/menu";
+@import "layout/menu2";
+@import "layout/modal";
+@import "layout/other";
+@import "layout/portfolio";
+@import "layout/product-box";
+@import "layout/service";
+@import "layout/slider";
+@import "layout/tap-top";
+
+/* pages */
+@import "pages/inner-page";
+@import "pages/offer";
+
+/* themes */
+@import "themes/theme-setting";
+@import "themes/rtl";
+@import "themes/dark";
+@import "themes/responsive";
+
+//* highlight cards *
+@import "layout/home-highlight";
+
+/* gift box */
+.giftbox-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #fffdfa;
+  border: 1px solid #f0e6d6;
+  box-shadow: 0 12px 30px rgba(20, 18, 10, 0.08);
+}
+
+.giftbox-card__media img {
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.giftbox-card__content h5 {
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.giftbox-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #1f1a12;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+.giftbox-status {
+  margin: 0 0 4px;
+  color: #7a6f61;
+  font-size: 13px;
+}
+
+.giftbox-discount {
+  margin: 0;
+  color: #a1762f;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.giftbox-notification {
+  margin-bottom: 20px;
+}
+
+.giftbox-notification .giftbox-card__action {
+  margin-inline-start: auto;
+}
+
+.giftbox-notification .giftbox-card__action .notification-mark-read {
+  white-space: nowrap;
+}
+
+@media (max-width: 575px) {
+  .giftbox-notification .giftbox-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .giftbox-notification .giftbox-card__action {
+    margin-inline-start: 0;
+    width: 100%;
+  }
+
+  .giftbox-notification .giftbox-card__action .notification-mark-read {
+    width: 100%;
+  }
+}
+
+tr.giftbox-row td {
+  background: #fff9ef;
+}
+
+tr.giftbox-row td:first-child {
+  border-left: 3px solid #c79b4b;
+}
+
+.giftbox-discount-line {
+  font-weight: 600;
+}
+
+.checkout-details .qty li.giftbox-item {
+  background: #fff9ef;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.giftbox-mini {
+  display: inline-flex;
+  align-items: center;
+  background: #1f1a12;
+  color: #fff !important;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+.checkout-details .giftbox-mini {
+  color: #fff;
+}
+
+.checkout-details .order-box .qty li .cart-content {
+  .cart-details {
+    min-width: 0;
+  }
+
+  .item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    margin-bottom: 4px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .item-meta-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .item-meta span {
+    float: none;
+    text-align: inherit;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+
+  .item-meta .meta-label {
+    color: #555;
+    font-weight: 600;
+  }
+
+  .item-unit-price {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .item-total {
+    align-self: start;
+    color: #222;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: end;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 575px) {
+  .checkout-details .order-box .qty li {
+    align-items: flex-start;
+  }
+
+  .checkout-details .order-box .qty li .cart-image {
+    width: 52px;
+    flex: 0 0 52px;
+  }
+
+  .checkout-details .order-box .qty li .cart-content {
+    width: calc(100% - 52px - 11px);
+    gap: 6px;
+  }
+
+  .checkout-details .order-box .qty li .cart-content h4 {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .checkout-details .order-box .qty li .cart-content .item-meta {
+    font-size: 11px;
+    gap: 3px 8px;
+  }
+
+  .checkout-details .order-box .qty li .cart-content .item-unit-price {
+    font-size: 12px;
+  }
+
+  .checkout-details .order-box .qty li .cart-content .item-total {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .checkout-details .order-box .qty li .cart-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .checkout-details .order-box .qty li .cart-content .item-total {
+    justify-self: end;
+  }
+}
+
+
+.giftbox-discount-summary,
+.giftbox-discount-total {
+  font-weight: 600;
+}
+
+.nav-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  padding: 2px 6px;
+  margin-inline-start: 8px;
+  border-radius: 999px;
+  background: #e03131;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Global spacing system */
+.section-gap {
+  padding-block: var(--section-vertical-gap-mobile);
+}
+
+.section-t-space {
+  padding-top: var(--section-vertical-gap-mobile);
+}
+
+.section-b-space {
+  padding-bottom: var(--section-vertical-gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-gap,
+  .section-t-space {
+    padding-top: var(--section-vertical-gap-desktop);
+  }
+
+  .section-gap,
+  .section-b-space {
+    padding-bottom: var(--section-vertical-gap-desktop);
+  }
+}
+
+.container,
+.container-fluid {
+  padding-inline: var(--section-horizontal-pad-mobile);
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container-fluid {
+    padding-inline: var(--section-horizontal-pad-desktop);
+  }
+}

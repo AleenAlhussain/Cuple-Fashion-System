@@ -1,0 +1,127 @@
+.home-highlight-card-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-highlight-card {
+  isolation: isolate;
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  min-height: 260px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #111;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 8, 8, 0.2) 0%, rgba(8, 8, 8, 0.9) 80%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 15, 15, 0.45);
+  }
+}
+
+.home-highlight-card__media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.45s ease;
+}
+
+.home-highlight-card:nth-child(1) .home-highlight-card__media {
+  filter: saturate(1.2) contrast(1.05);
+}
+
+.home-highlight-card:hover .home-highlight-card__media {
+  transform: scale(1.05);
+}
+
+.home-highlight-card__content {
+  position: absolute;
+  inset: auto 1.25rem 1.25rem;
+  z-index: 2;
+  padding-top: 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.home-highlight-card__badge {
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.35rem;
+}
+
+.home-highlight-card__content:first-of-type .home-highlight-card__badge {
+  background: rgba(212, 157, 103, 0.15);
+  color: #d49d67;
+}
+
+.home-highlight-card__subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0.45rem;
+}
+
+.home-highlight-card__title {
+  font-size: clamp(1.9rem, 3vw, 2.3rem);
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  line-height: 1.25;
+}
+
+.home-highlight-card__description {
+  margin-bottom: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.45;
+}
+
+.home-highlight-card__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+  background: linear-gradient(120deg, #d49d67, #d49d67);
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(212, 157, 103, 0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.home-highlight-card__button:hover {
+  transform: translateX(4px);
+  box-shadow: 0 12px 28px rgba(212, 157, 103, 0.55);
+}
+
+.home-highlight-card__button i {
+  transition: transform 0.3s ease;
+}
+
+.home-highlight-card-link:hover .home-highlight-card__button i {
+  transform: translateX(4px);
+}
