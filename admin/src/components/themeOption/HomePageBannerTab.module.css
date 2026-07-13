@@ -1,0 +1,167 @@
+.homeBannerTab {
+  padding: 0;
+}
+
+.homeBannerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.homeBannerIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.imageSelectList {
+  justify-content: center !important;
+  width: 140px;
+  margin-inline: auto;
+}
+
+.homeBannerCard {
+  border-radius: 14px;
+  border: 1px solid #f1f3f5;
+  box-shadow: 0 0 18px rgba(120, 123, 135, 0.1);
+}
+
+.bannerHeader {
+  border-bottom: 1px solid #edf2f7;
+  padding: 1rem 1.4rem;
+  background: #fff;
+}
+
+.bannerHeaderTitle {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bannerHeaderActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bannerBody {
+  padding: 1.4rem;
+  background: #fff;
+}
+
+.bannerBody :global(.input-error) {
+  background: transparent;
+  margin: 0;
+}
+
+.bannerBody :global(.input-error) .row {
+  margin: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bannerBody :global(.input-error .form-label-title) {
+  font-size: 0.95rem;
+  color: #4c4c4c;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0;
+}
+
+.bannerBody :global(.custom-switch-flex) {
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.bannerBody :global(.custom-switch-flex .help-text) {
+  margin: 0;
+}
+
+.bannerRow {
+  margin-bottom: 0.5rem;
+}
+
+.linkRow {
+  margin-block: 1rem;
+}
+
+.bannerUploadGroup {
+  margin-bottom: 0;
+}
+
+.bannerUploadWrapper {
+  width: 100%;
+  display: block;
+}
+
+.bannerUploadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.bannerUploadColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bannerUploadWrapper :global(.input-error) {
+  width: 100%;
+  margin: 0;
+}
+
+.bannerUploadWrapper :global(.image-select-list) {
+  width: 155px;
+  justify-content: center;
+  gap: 12px;
+}
+
+.bannerUploadWrapper :global(.image-select-list li.choosefile-input) {
+  width: 140px;
+  height: 140px;
+  min-width: 140px;
+  min-height: 140px;
+  border-radius: 12px;
+  border: 1px solid rgba(221, 221, 221, 0.56);
+  background-color: #fff9f0;
+  box-shadow: 0 0 12px rgba(218, 170, 92, 0.25);
+}
+
+.bannerUploadWrapper :global(.image-select-list li.choosefile-input label) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerUploadWrapper :global(.image-select-list li.choosefile-input label img) {
+  max-width: 50px;
+}
+
+@media (max-width: 768px) {
+  .bannerUploadWrapper :global(.image-select-list li.choosefile-input) {
+    height: 110px;
+    min-height: 80px;
+  }
+}
+
+.bannerControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.bannerLabel {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.noBanners {
+  color: #6c757d;
+}
