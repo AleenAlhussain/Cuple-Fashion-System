@@ -1,0 +1,200 @@
+Production Architecture Overview
+
+Production runs:
+
+cuple-next.service → Frontend (Next.js)
+
+cuple-admin.service → Admin panel (Next.js)
+
+cuple-deploy.service → GitLab webhook listener
+
+Laravel backend live path:
+
+/home/cuple/public_html/projects/cuple/backend
+
+
+⚠️ Dev services must NEVER run on production:
+
+cuple-next-dev.service
+
+cuple-admin-dev.service
+
+✅ 1. Normal Deploy (Recommended)
+Step 1 — Developer pushes to main branch
+git push origin main
+
+
+The GitLab webhook automatically triggers:
+
+/home/cuple/deploy/deploy.sh
+
+
+No manual action required.
+There is no separate production cuple.sh; deploy.sh is the production deploy script.
+
+✅ 2. How to Verify Deployment
+A) Check Latest Deploy Log
+ls -lt /home/cuple/deploy/logs/deploy-*.log | head -n 3
+tail -n 120 /home/cuple/deploy/logs/deploy-XXXX.log
+
+B) Check Services Status
+systemctl is-active cuple-next.service
+systemctl is-active cuple-admin.service
+systemctl is-active cuple-deploy.service
+
+
+All must return:
+
+active
+
+C) Quick Health Check
+curl -I https://cuple.shop
+curl -I https://admin.cuple.shop
+curl -I https://api.cuple.shop
+
+🛠 3. Manual Deploy (If Needed)
+
+If webhook fails or you want partial deploy:
+
+Deploy Frontend Only
+sudo -u cuple -H bash -lc 'REPO_PATH=/home/cuple/projects/cuple /home/cuple/deploy/deploy.sh main frontend'
+
+Deploy Admin Only
+sudo -u cuple -H bash -lc 'REPO_PATH=/home/cuple/projects/cuple /home/cuple/deploy/deploy.sh main admin'
+
+Deploy Backend Only
+sudo -u cuple -H bash -lc 'REPO_PATH=/home/cuple/projects/cuple /home/cuple/deploy/deploy.sh main backend'
+
+Deploy Multiple Apps
+sudo -u cuple -H bash -lc 'REPO_PATH=/home/cuple/projects/cuple /home/cuple/deploy/deploy.sh main frontend,admin'
+
+Deploy All Apps
+sudo -u cuple -H bash -lc 'REPO_PATH=/home/cuple/projects/cuple /home/cuple/deploy/deploy.sh main all'
+
+Target Selection Rule
+
+If you pass frontend, admin, backend, or all, deploy.sh now treats that list as the exact target set.
+This fixes partial deploys so a manual frontend deploy does not also deploy backend/admin just because newer commits exist.
+
+⚙️ 4. What deploy.sh Does
+🔹 Frontend / Admin
+
+npm ci
+
+npm run build
+
+Auto-repair ownership on:
+
+.next
+
+node_modules
+
+Restart service:
+
+sudo -n systemctl restart cuple-next.service
+sudo -n systemctl restart cuple-admin.service
+
+Verify service is active after restart:
+
+sudo -n systemctl is-active cuple-next.service
+sudo -n systemctl is-active cuple-admin.service
+
+🔹 Backend
+
+rsync from git repo → live backend directory
+
+composer install --no-dev
+
+php artisan migrate --force
+
+Clear and cache:
+
+php artisan cache:clear
+php artisan config:cache
+php artisan route:cache
+
+Auto-repair writable Laravel paths:
+
+storage
+
+bootstrap/cache
+
+Backend health check:
+
+curl -I https://api.cuple.shop/up
+
+⚠️ Critical Rules
+❌ Never Run:
+
+npm run dev on production
+
+dev systemd services
+
+manual npm install
+
+Always let deploy.sh handle builds.
+
+✅ Production PHP Version
+
+Must use:
+
+/opt/cpanel/ea-php84/root/usr/bin/php
+
+
+Backend production runs PHP 8.4 (FastCGI).
+
+🚨 Troubleshooting Guide
+1️⃣ ChunkLoadError / 400 static files
+
+Cause:
+
+Dev server was running
+
+Old build cached
+
+Fix:
+
+systemctl restart cuple-next.service
+systemctl restart cuple-admin.service
+
+2️⃣ Composer PHP version mismatch
+
+Make sure deploy.sh uses:
+
+PHP_BIN="/opt/cpanel/ea-php84/root/usr/bin/php"
+
+3️⃣ Permission errors in .next, node_modules, storage, or bootstrap/cache
+
+deploy.sh now attempts an automatic sudo -n chown -R cuple:cuple repair first.
+
+If that still fails, run once as root:
+
+chown -R cuple:cuple /home/cuple/projects/cuple/frontend/.next
+chown -R cuple:cuple /home/cuple/projects/cuple/frontend/node_modules
+chown -R cuple:cuple /home/cuple/projects/cuple/admin/.next
+chown -R cuple:cuple /home/cuple/projects/cuple/admin/node_modules
+chown -R cuple:cuple /home/cuple/public_html/projects/cuple/backend/storage
+chown -R cuple:cuple /home/cuple/public_html/projects/cuple/backend/bootstrap/cache
+
+4️⃣ Migration errors
+
+Check:
+
+DB_HOST=localhost
+
+
+Not 127.0.0.1 (important for cPanel MySQL socket auth).
+
+📁 Important Paths
+Item	Path
+Git Repo	/home/cuple/projects/cuple
+Backend Live	/home/cuple/public_html/projects/cuple/backend
+Deploy Script	/home/cuple/deploy/deploy.sh
+Deploy Logs	/home/cuple/deploy/logs/
+🧠 Golden Rule
+
+Push to main → auto deploy → verify logs → verify services.
+
+No manual builds.
+No dev servers.
+No production hacks.
