@@ -1,0 +1,240 @@
+.storiesSection {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 15px 0;
+  padding: 0 10px;
+}
+
+.storiesContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.storiesWrapper {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 5px 10px 10px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+.storyCard {
+  position: relative;
+  width: 180px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+
+  /* Unviewed story - subtle blue border */
+  &:not(.viewed) {
+    border-color: #0095f6;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px rgba(0, 149, 246, 0.4);
+  }
+
+  /* Viewed story - dimmed appearance */
+  &.viewed {
+    opacity: 0.7;
+    border-color: #ddd;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.cardImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cardPlaceholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  pointer-events: none;
+}
+
+.storyCount {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.storyTitle {
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+  right: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  z-index: 1;
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .storiesSection {
+    padding: 15px 0;
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .storiesWrapper {
+    gap: 10px;
+    padding: 5px 8px 8px;
+  }
+
+  .storyCard {
+    width: 150px;
+    height: 230px;
+    border-radius: 10px;
+  }
+
+  .cardPlaceholder span {
+    font-size: 30px;
+  }
+
+  .storyCount {
+    min-width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .storiesSection {
+    padding: 12px 0;
+  }
+
+  .sectionTitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 0 8px;
+  }
+
+  .storiesWrapper {
+    gap: 8px;
+    padding: 4px 8px 8px;
+  }
+
+  .storyCard {
+    width: 130px;
+    height: 200px;
+    border-radius: 8px;
+    border-width: 1.5px;
+  }
+
+  .cardPlaceholder span {
+    font-size: 26px;
+  }
+
+  .cardOverlay {
+    height: 35%;
+  }
+
+  .storyCount {
+    top: 6px;
+    right: 6px;
+    min-width: 18px;
+    height: 18px;
+    font-size: 9px;
+    padding: 0 5px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 375px) {
+  .storiesWrapper {
+    gap: 6px;
+  }
+
+  .storyCard {
+    width: 110px;
+    height: 170px;
+  }
+
+  .cardPlaceholder span {
+    font-size: 22px;
+  }
+
+  .sectionTitle {
+    font-size: 14px;
+  }
+}

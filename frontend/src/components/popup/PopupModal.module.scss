@@ -1,0 +1,355 @@
+.popupModal {
+  :global(.modal-content) {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.modalBody {
+  padding: 0 !important;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  svg {
+    font-size: 24px;
+    color: #333;
+  }
+
+  &:hover {
+    background: #fff;
+    transform: scale(1.1);
+  }
+}
+
+// Hero Popup (Collection & Offer)
+.heroPopup {
+  display: flex;
+  min-height: 400px;
+
+  &.rtl {
+    direction: rtl;
+    flex-direction: row-reverse;
+  }
+
+  .imageSection {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+    background: #f5f5f5;
+  }
+
+  .contentSection {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .discountBadge {
+    display: inline-block;
+    background: var(--theme-color, #D49D67);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  .ctaButton {
+    background: var(--theme-color, #D49D67);
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: fit-content;
+
+    &:hover {
+      background: var(--theme-hover, #B98A3F);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Coupon Popup
+.couponPopup {
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #f8f5f0 100%);
+
+  &.rtl {
+    direction: rtl;
+  }
+
+  .couponImage {
+    margin-bottom: 20px;
+  }
+
+  .couponTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+
+  .couponDescription {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 24px;
+  }
+
+  .discountDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .discountValue {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--theme-color, #D49D67);
+      line-height: 1;
+    }
+
+    .discountLabel {
+      font-size: 1rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 4px;
+    }
+  }
+
+  .couponCodeBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #fff;
+    border: 2px dashed var(--theme-color, #D49D67);
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+
+    .couponCode {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--theme-color, #D49D67);
+      letter-spacing: 2px;
+    }
+
+    .copyButton {
+      background: var(--theme-color, #D49D67);
+      border: none;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      svg {
+        font-size: 20px;
+      }
+
+      &:hover {
+        background: var(--theme-hover, #B98A3F);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .shopButton {
+    background: var(--theme-color, #D49D67);
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--theme-hover, #B98A3F);
+    }
+  }
+}
+
+// Newsletter Popup
+.newsletterPopup {
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+
+  &.rtl {
+    direction: rtl;
+  }
+
+  .newsletterImage {
+    margin-bottom: 24px;
+  }
+
+  .newsletterTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+
+  .newsletterDescription {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 24px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subscribeForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 320px;
+    margin: 0 auto 20px;
+
+    .emailInput {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: var(--theme-color, #D49D67);
+      }
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+
+    .subscribeButton {
+      width: 100%;
+      background: var(--theme-color, #D49D67);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover:not(:disabled) {
+        background: var(--theme-hover, #B98A3F);
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .couponHint {
+    font-size: 0.9rem;
+    color: var(--theme-color, #D49D67);
+    font-weight: 500;
+  }
+}
+
+// Default Popup
+.defaultPopup {
+  padding: 40px;
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: #666;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .heroPopup {
+    flex-direction: column !important;
+    min-height: auto;
+
+    .imageSection {
+      min-height: 200px;
+    }
+
+    .contentSection {
+      padding: 24px;
+    }
+
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .couponPopup,
+  .newsletterPopup {
+    padding: 24px;
+  }
+
+  .couponPopup .discountDisplay .discountValue {
+    font-size: 2.5rem;
+  }
+
+  .couponPopup .couponCodeBox .couponCode {
+    font-size: 1.2rem;
+  }
+}

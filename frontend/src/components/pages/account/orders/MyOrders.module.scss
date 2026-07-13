@@ -1,0 +1,239 @@
+.ordersCard {
+  border-radius: 1.4rem;
+  box-shadow: 0 25px 45px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  background: #ffffff;
+}
+
+.cardBody {
+  padding: 1.5rem;
+}
+
+.summaryBar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.summaryChip {
+  border-radius: 0.9rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border: 1px solid transparent;
+  background: #f8f9ff;
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.03);
+}
+
+.summaryChip strong {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.chipTotal {
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+.chipDelivered {
+  background: #e9f7ef;
+  border-color: rgba(29, 161, 82, 0.25);
+  color: #1e8a3f;
+}
+
+.chipPending {
+  background: #fff7e6;
+  border-color: rgba(193, 135, 0, 0.3);
+  color: #ad7a00;
+}
+
+.chipCancelled {
+  background: #fff0f0;
+  border-color: rgba(204, 36, 46, 0.25);
+  color: #b92b2b;
+}
+
+.filterRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.filterItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.filterItem label {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.filterInput {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.85rem;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.95rem;
+  background: #fcfcfd;
+  transition: border-color 0.2s ease;
+}
+
+.filterInput:focus {
+  border-color: rgba(59, 130, 246, 0.7);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.dateInputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tableWrapper {
+  background: #ffffff;
+  border-radius: 1.1rem;
+  padding: 1rem;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+.ordersTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.ordersTable thead th {
+  border-bottom: 1px solid #e5e7eb;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  padding-bottom: 0.75rem;
+}
+
+.ordersTable tbody tr {
+  transition: background 0.2s ease;
+}
+
+.ordersTable tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.ordersTable tbody tr:hover {
+  background: #eef2ff;
+}
+
+.ordersTable td {
+  border: none;
+  padding: 0.85rem 0.9rem;
+  vertical-align: middle;
+}
+
+.ordersTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.orderNumberCell {
+  font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+  font-size: 0.95rem;
+}
+
+.orderNumberValue {
+  font-weight: 700;
+}
+
+.dateCell {
+  color: #4b5563;
+  font-size: 0.92rem;
+}
+
+.amountCell {
+  font-weight: 600;
+  color: #111827;
+}
+
+.paymentBadge {
+  display: inline-flex;
+  padding: 0.3rem 0.75rem;
+  border-radius: 30px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #174ea6;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.actionCell {
+  white-space: nowrap;
+}
+
+.viewButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--theme-color, #1d4ed8);
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.75rem;
+  color: var(--theme-color, #1d4ed8);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.viewButton:hover {
+  background: var(--theme-color, #1d4ed8);
+  color: #ffffff;
+}
+
+.emptyFilters {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+}
+
+.statusDelivered {
+  background: #e6f9ec;
+  color: #1f8a3c;
+  border-color: rgba(39, 174, 96, 0.25);
+}
+
+.statusPending {
+  background: #fff9eb;
+  color: #ad7f00;
+  border-color: rgba(212, 176, 0, 0.25);
+}
+
+.statusCancelled {
+  background: #ffecec;
+  color: #b83232;
+  border-color: rgba(219, 39, 119, 0.25);
+}
+
+@media (max-width: 768px) {
+  .dateInputs {
+    flex-direction: column;
+  }
+
+  .filterRow {
+    grid-template-columns: 1fr;
+  }
+}

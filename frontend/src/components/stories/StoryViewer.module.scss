@@ -1,0 +1,452 @@
+.storyModal {
+  :global(.modal-dialog) {
+    max-width: 420px;
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  :global(.modal-content) {
+    background: transparent;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  :global(.modal-backdrop) {
+    background: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.storyModalContent {
+  background: transparent !important;
+  border: none !important;
+}
+
+.storyViewer {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  max-height: 700px;
+  min-height: 450px;
+  background: #000;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  overflow: hidden;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  &:active {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.progressContainer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 60px;
+  z-index: 50;
+  display: flex;
+  gap: 4px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #fff;
+  transition: width 0.05s linear;
+}
+
+.header {
+  position: absolute;
+  top: 22px;
+  left: 12px;
+  right: 60px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+}
+
+.creatorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.creatorName {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.creatorHandle {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+.timeAgo {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+}
+
+.contentArea {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.navAreaLeft,
+.navAreaRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 30;
+  -webkit-tap-highlight-color: transparent;
+
+  .navIcon {
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &:hover .navIcon {
+    opacity: 1;
+  }
+}
+
+.navAreaLeft {
+  left: 0;
+  justify-content: flex-start;
+  padding-left: 8px;
+}
+
+.navAreaRight {
+  right: 0;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.storyMedia {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.storyTitle {
+  position: absolute;
+  bottom: 180px;
+  left: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.shopButton {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #000;
+  padding: 10px 28px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  z-index: 10;
+
+  &:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #000;
+  }
+
+  &:active {
+    transform: translateX(-50%) scale(0.98);
+  }
+}
+
+.productCard {
+  position: absolute;
+  bottom: 60px;
+  left: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 10;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.productName {
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.productPrice {
+  color: #666;
+  font-size: 12px;
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .storyModal {
+    :global(.modal-dialog) {
+      max-width: 380px;
+      margin: 0.75rem auto;
+    }
+  }
+
+  .storyViewer {
+    height: 70vh;
+    max-height: 600px;
+    min-height: 400px;
+  }
+
+  .closeButton {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .progressContainer {
+    right: 55px;
+  }
+
+  .header {
+    right: 55px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .storyModal {
+    :global(.modal-dialog) {
+      max-width: calc(100% - 24px);
+      margin: 12px auto;
+    }
+  }
+
+  .storyViewer {
+    height: 65vh;
+    max-height: 550px;
+    min-height: 350px;
+    border-radius: 12px;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .progressContainer {
+    top: 8px;
+    left: 8px;
+    right: 50px;
+    gap: 3px;
+  }
+
+  .progressBar {
+    height: 2px;
+  }
+
+  .header {
+    top: 18px;
+    left: 10px;
+    right: 50px;
+  }
+
+  .creatorName {
+    font-size: 12px;
+  }
+
+  .timeAgo {
+    font-size: 10px;
+  }
+
+  .navAreaLeft,
+  .navAreaRight {
+    width: 35%;
+  }
+
+  .navIcon {
+    display: none;
+  }
+
+  .storyTitle {
+    bottom: 160px;
+    left: 12px;
+    right: 12px;
+    font-size: 14px;
+  }
+
+  .shopButton {
+    bottom: 115px;
+    padding: 9px 22px;
+    font-size: 12px;
+  }
+
+  .productCard {
+    bottom: 50px;
+    left: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+
+  .productName {
+    font-size: 12px;
+  }
+
+  .productPrice {
+    font-size: 11px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 375px) {
+  .storyModal {
+    :global(.modal-dialog) {
+      max-width: calc(100% - 16px);
+      margin: 8px auto;
+    }
+  }
+
+  .storyViewer {
+    height: 60vh;
+    max-height: 500px;
+    min-height: 320px;
+  }
+
+  .closeButton {
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .progressContainer {
+    top: 6px;
+    left: 6px;
+    right: 45px;
+  }
+
+  .header {
+    top: 15px;
+    left: 8px;
+    right: 45px;
+  }
+
+  .storyTitle {
+    bottom: 150px;
+    left: 10px;
+    right: 10px;
+    font-size: 13px;
+  }
+
+  .shopButton {
+    bottom: 105px;
+    padding: 8px 18px;
+    font-size: 11px;
+  }
+
+  .productCard {
+    bottom: 45px;
+    left: 10px;
+    right: 10px;
+  }
+}
