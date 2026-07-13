@@ -1,0 +1,427 @@
+/**=====================
+   Global Fixes CSS
+   FIX: White/invisible text across admin panel
+   PRIORITY: Loaded last in style.scss for maximum specificity
+==========================**/
+
+/* ============================================
+   Light Mode Text Color Fixes
+   Ensures all text is visible in light mode
+   Using high specificity selectors
+   ============================================ */
+
+/* Root level color enforcement for light mode */
+html body:not(.dark-only) {
+  color: #333;
+}
+
+html body:not(.dark-only),
+body:not(.dark-only) {
+  /* Form controls - ensure dark text */
+  .form-control,
+  .form-select,
+  select,
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  input[type="date"],
+  input[type="datetime-local"],
+  textarea {
+    color: #333 !important;
+    background-color: #fff;
+  }
+
+  /* Select elements and options */
+  select option {
+    color: #333 !important;
+    background-color: #fff !important;
+  }
+
+  /* Custom Select Box - .box-content dropdown */
+  .custom-select-box {
+    .box-content {
+      background-color: #fff !important;
+      color: #333 !important;
+
+      .form-control {
+        color: #333 !important;
+        background-color: #fff !important;
+      }
+
+      ul {
+        li {
+          color: #222 !important;
+
+          p {
+            color: #4a5568 !important;
+          }
+
+          &:hover p {
+            color: var(--theme-color) !important;
+          }
+        }
+      }
+    }
+  }
+
+  /* Bootstrap tagsinput - tag labels */
+  .bootstrap-tagsinput {
+    background-color: #f9f9f6 !important;
+    color: #333 !important;
+
+    span:not(.tag) {
+      color: #6c757d !important;
+    }
+
+    .tag {
+      background-color: var(--theme-color) !important;
+      color: #fff !important;
+
+      a {
+        color: #fff !important;
+      }
+    }
+  }
+
+  /* intl-tel-input dropdown list */
+  .intl-tel-input {
+    li {
+      color: #333 !important;
+
+      p {
+        color: #4a5568 !important;
+      }
+
+      &:hover p,
+      &.selected p {
+        color: var(--theme-color) !important;
+      }
+    }
+  }
+
+  /* Dropdown menus */
+  .dropdown-menu {
+    background-color: #fff !important;
+
+    .dropdown-item {
+      color: #212529 !important;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #16181b !important;
+        background-color: #f8f9fa !important;
+      }
+    }
+
+    .dropdown-header {
+      color: #6c757d !important;
+    }
+  }
+
+  /* Labels and form labels */
+  label,
+  .form-label,
+  .col-form-label,
+  .form-check-label {
+    color: #333 !important;
+  }
+
+  /* Input group text */
+  .input-group-text {
+    color: #333 !important;
+    background-color: #e9ecef;
+  }
+
+  /* Table content */
+  .table {
+    color: #333 !important;
+
+    td,
+    th {
+      color: #333 !important;
+    }
+  }
+
+  /* Card text */
+  .card {
+    .card-title,
+    .card-subtitle,
+    .card-text {
+      color: #333 !important;
+    }
+
+    .card-header {
+      h1, h2, h3, h4, h5, h6 {
+        color: #333 !important;
+      }
+    }
+  }
+
+  /* Light badges need dark text */
+  .badge {
+    &.bg-light,
+    &.badge-light,
+    &.badge-light-secondary {
+      color: #333 !important;
+    }
+  }
+
+  /* Alert text */
+  .alert {
+    &.alert-light,
+    &.alert-secondary {
+      color: #333 !important;
+    }
+  }
+
+  /* React-select and similar components */
+  [class*="-singleValue"],
+  [class*="-placeholder"],
+  [class*="-option"],
+  [class*="-menu"] {
+    color: #333 !important;
+  }
+
+  /* Reactstrap specific */
+  .modal-body,
+  .modal-header,
+  .modal-footer {
+    color: #333 !important;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #333 !important;
+    }
+  }
+
+  /* List items */
+  .list-group-item {
+    color: #333 !important;
+  }
+
+  /* Nav links */
+  .nav-link:not(.active) {
+    color: #6c757d;
+  }
+
+  /* Placeholder text */
+  ::placeholder {
+    color: #6c757d !important;
+    opacity: 1;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #6c757d !important;
+  }
+
+  ::-moz-placeholder {
+    color: #6c757d !important;
+  }
+
+  /* Generic text classes */
+  .text-body {
+    color: #333 !important;
+  }
+
+  /* Custom multi-select dropdowns */
+  .multi-select-dropdown,
+  .custom-dropdown,
+  .select-dropdown {
+    .dropdown-option,
+    .option-item,
+    .select-option {
+      color: #333 !important;
+    }
+  }
+
+  /* Checkbox labels in dropdowns */
+  .form-check {
+    .form-check-label {
+      color: #333 !important;
+    }
+  }
+
+  /* Country flag dropdown */
+  .country-list {
+    li {
+      h5 {
+        color: #333 !important;
+      }
+    }
+  }
+
+  /* Quick dropdown box */
+  .quick-dropdown-box {
+    .dropdown-menu {
+      .dropdown-title {
+        color: #212529 !important;
+
+        h4 {
+          color: #212529 !important;
+        }
+      }
+
+      .dropdown-list {
+        a {
+          color: #2b2b2b !important;
+
+          span {
+            color: #333 !important;
+          }
+        }
+      }
+    }
+  }
+
+  /* Text within page body */
+  .page-body {
+    color: #333;
+
+    p, span, div, li {
+      &:not([class*="text-white"]):not([class*="badge"]):not(.tag) {
+        color: inherit;
+      }
+    }
+  }
+}
+
+/* ============================================
+   Dark Mode Fixes
+   Ensures proper contrast in dark mode
+   ============================================ */
+
+html body.dark-only,
+body.dark-only {
+  /* Ensure white/light text in dark mode */
+  .form-control,
+  .form-select,
+  select {
+    color: rgba(255, 255, 255, 0.8) !important;
+    background-color: #0b141d !important;
+    border-color: #404040 !important;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.4) !important;
+    }
+  }
+
+  select option {
+    color: rgba(255, 255, 255, 0.8) !important;
+    background-color: #1c2128 !important;
+  }
+
+  .custom-select-box {
+    .box-content {
+      background-color: #0b141d !important;
+      color: #ddd !important;
+
+      .form-control {
+        background-color: #1c2128 !important;
+        color: #ddd !important;
+      }
+
+      ul li {
+        color: rgba(255, 255, 255, 0.6) !important;
+
+        p {
+          color: rgba(255, 255, 255, 0.6) !important;
+        }
+      }
+    }
+  }
+
+  .bootstrap-tagsinput {
+    background-color: #0b141d !important;
+    border-color: #404040 !important;
+    color: #ddd !important;
+
+    span:not(.tag) {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: #1c2128 !important;
+    border-color: #404040 !important;
+
+    .dropdown-item {
+      color: rgba(255, 255, 255, 0.8) !important;
+
+      &:hover,
+      &:focus {
+        background-color: #0b141d !important;
+        color: #fff !important;
+      }
+    }
+  }
+
+  label,
+  .form-label,
+  .col-form-label {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+}
+
+/* ============================================
+   Portal-rendered Dropdown Fixes
+   For dropdowns rendered via React Portal
+   ============================================ */
+
+/* Portal dropdowns - positioned at body level */
+body > div[style*="z-index: 99999"],
+body > div[style*="z-index:99999"] {
+  color: #333 !important;
+
+  * {
+    color: inherit;
+  }
+
+  input,
+  .form-control {
+    color: #333 !important;
+  }
+
+  .form-check-label,
+  label {
+    color: #333 !important;
+  }
+}
+
+/* Dark mode portal dropdowns */
+body.dark-only > div[style*="z-index: 99999"],
+body.dark-only > div[style*="z-index:99999"] {
+  color: #ddd !important;
+  background-color: #1c2128 !important;
+
+  * {
+    color: inherit;
+  }
+
+  input,
+  .form-control {
+    color: #ddd !important;
+    background-color: #0b141d !important;
+  }
+}
+
+/* ============================================
+   Force override for any remaining white text
+   Nuclear option - highest specificity
+   ============================================ */
+
+html body:not(.dark-only) .custom-select-box .box-content ul li,
+html body:not(.dark-only) .custom-select-box .box-content ul li p,
+html body:not(.dark-only) .intl-tel-input li,
+html body:not(.dark-only) .intl-tel-input li p {
+  color: #333 !important;
+}
+
+html body:not(.dark-only) .custom-select-box .box-content ul li:hover p,
+html body:not(.dark-only) .intl-tel-input li:hover p,
+html body:not(.dark-only) .custom-select-box .box-content ul li.selected p {
+  color: var(--theme-color) !important;
+}

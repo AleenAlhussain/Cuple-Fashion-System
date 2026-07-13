@@ -1,0 +1,440 @@
+.discount-rule-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 16px 16px;
+}
+
+.discount-rule-form .discount-rule-header {
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+}
+
+.discount-rule-body {
+  padding-top: 16px;
+}
+
+.discount-rule-tabs {
+  gap: 6px;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 16px;
+}
+
+.discount-rule-tabs .nav-link {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 0;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.discount-rule-tabs .nav-link:hover {
+  background: rgba(212, 157, 103, 0.12);
+  color: #2f2f2f;
+}
+
+.discount-rule-tabs .nav-link.active {
+  color: #2f2f2f;
+  background: rgba(212, 157, 103, 0.16);
+  border-bottom: 2px solid var(--theme-color);
+  border-radius: 6px 6px 0 0;
+}
+
+.discount-rule-tab-content {
+  padding: 16px 0 8px;
+}
+
+.discount-rule-tab-pane {
+  padding: 0;
+}
+
+.discount-rule-basic-grid {
+  row-gap: 12px;
+}
+
+.discount-rule-fields-row {
+  row-gap: 12px;
+}
+
+.discount-rule-form textarea.form-control,
+.discount-rule-form .form-control[type="textarea"] {
+  min-height: 90px;
+  border-color: #e5e5e5;
+}
+
+.discount-rule-form .form-control,
+.discount-rule-form .form-select,
+.discount-rule-form select.form-control {
+  min-height: 38px;
+}
+
+.discount-rule-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.discount-rule-section-card {
+  border: 1px solid #ececec;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.discount-rule-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.discount-rule-info-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #f7f7f9;
+  border: 1px solid #ececec;
+  margin-bottom: 12px;
+  color: #2f2f2f;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.discount-rule-alert {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 4px solid #f0ad4e;
+  background: #fff8e5;
+}
+
+.discount-rule-alert-info {
+  border-left-color: #6c757d;
+  background: #f6f7f9;
+}
+
+.discount-rule-info-card {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  background: #fafafa;
+}
+
+.discount-rule-primary {
+  background-color: var(--theme-color) !important;
+  border-color: var(--theme-color) !important;
+  color: #fff !important;
+}
+
+.discount-rule-secondary {
+  background-color: #f0f1f2 !important;
+  border-color: #e2e3e5 !important;
+  color: #444 !important;
+}
+
+.discount-rule-actions {
+  margin-top: 24px;
+}
+
+.discount-rule-actions .col-md-12 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.discount-rule-actions .btn {
+  min-width: 120px;
+  height: 38px;
+}
+
+.discount-rule-table th,
+.discount-rule-table td {
+  padding: 8px 10px;
+  vertical-align: middle;
+}
+
+.discount-rule-table-head th {
+  background: #f5f5f5;
+  color: #333;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.discount-rule-table .col-filter-type {
+  width: 26%;
+}
+
+.discount-rule-table .col-filter-mode {
+  width: 12%;
+}
+
+.discount-rule-table .col-filter-values {
+  width: auto;
+}
+
+.discount-rule-table .col-filter-action {
+  width: 8%;
+}
+
+.discount-rule-icon-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount-rule-icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+.discount-rule-preview-card {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f7f7f7;
+  border: 1px solid #ececec;
+}
+
+.discount-rule-stats-wrap {
+  margin-top: 16px;
+}
+
+.discount-rule-stats-card {
+  margin-bottom: 0;
+  border-radius: 12px;
+}
+
+.discount-rule-stats-header {
+  background: #fafafa;
+}
+
+.discount-rule-export-btn {
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.discount-rule-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.discount-rule-stats-grid > [class*="col"] {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 992px) {
+  .discount-rule-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .discount-rule-page {
+    padding: 20px 12px 12px;
+  }
+
+  .discount-rule-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .discount-rule-tabs .nav-item {
+    flex: 0 0 auto;
+  }
+
+  .discount-rule-table {
+    min-width: 700px;
+  }
+
+  .discount-rule-actions .col-md-12 {
+    justify-content: flex-start;
+  }
+
+  .discount-rule-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   FIX: Dropdown Z-Index and Overflow Issues
+   ============================================ */
+
+/* Fix overflow on parent containers to prevent dropdown clipping */
+.discount-rule-filter-section {
+  overflow: visible !important;
+}
+
+.discount-rule-section-card {
+  overflow: visible !important;
+}
+
+.discount-rule-table {
+  overflow: visible !important;
+}
+
+.discount-rule-table tbody,
+.discount-rule-table tr,
+.discount-rule-table td {
+  overflow: visible !important;
+}
+
+.discount-rule-tab-content {
+  overflow: visible !important;
+}
+
+.discount-rule-tab-pane {
+  overflow: visible !important;
+}
+
+/* Ensure card and form containers allow overflow */
+.discount-rule-form .card,
+.discount-rule-form .card-body {
+  overflow: visible !important;
+}
+
+/* Fix for Reactstrap/Bootstrap components */
+.discount-rule-page .table-responsive {
+  overflow: visible !important;
+}
+
+/* Modal overflow fix for dropdowns inside modals */
+.modal-body {
+  overflow: visible !important;
+}
+
+.modal-content {
+  overflow: visible !important;
+}
+
+/* Filter section specific overrides */
+.discount-rule-filter-section .position-relative {
+  overflow: visible !important;
+}
+
+/* Ensure tabs don't clip dropdowns */
+.nav-tabs,
+.tab-content,
+.tab-pane {
+  overflow: visible !important;
+}
+
+/* ============================================
+   FIX: Text Color Issues in Form Elements
+   ============================================ */
+
+/* Ensure proper text colors in form elements (light mode) */
+body:not(.dark-only) {
+  .discount-rule-page {
+    /* Form controls */
+    .form-control,
+    .form-select,
+    select.form-control,
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      color: #333 !important;
+      background-color: #fff;
+    }
+
+    /* Select dropdown options */
+    select option {
+      color: #333 !important;
+      background-color: #fff;
+    }
+
+    /* Dropdown menus */
+    .dropdown-menu,
+    .dropdown-item {
+      color: #333 !important;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      color: #333 !important;
+      background-color: #f8f9fa;
+    }
+
+    /* Input group text */
+    .input-group-text {
+      color: #333;
+    }
+
+    /* Labels */
+    label,
+    .form-label,
+    .col-form-label {
+      color: #333;
+    }
+
+    /* Badge text */
+    .badge {
+      &.bg-light,
+      &.badge-light {
+        color: #333 !important;
+      }
+    }
+
+    /* Table text */
+    .table td,
+    .table th {
+      color: #333;
+    }
+
+    /* Placeholder styling */
+    .form-control::placeholder,
+    .form-select::placeholder {
+      color: #999 !important;
+    }
+  }
+}
+
+/* Global form element text color fix */
+body:not(.dark-only) {
+  /* Select elements */
+  select.form-control,
+  select.form-select,
+  .form-select {
+    color: #333 !important;
+  }
+
+  /* Dropdown items */
+  .dropdown-menu .dropdown-item {
+    color: #212529 !important;
+  }
+
+  /* Input and text areas */
+  .form-control:not([type="checkbox"]):not([type="radio"]) {
+    color: #333;
+  }
+
+  /* React Select styles (if used) */
+  .css-1dimb5e-singleValue,
+  .css-166bipr-Input,
+  [class*="-singleValue"],
+  [class*="-Input"] input {
+    color: #333 !important;
+  }
+
+  /* Reactstrap Input */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    color: #333;
+  }
+}

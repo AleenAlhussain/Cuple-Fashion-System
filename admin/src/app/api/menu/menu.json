@@ -1,0 +1,312 @@
+{
+    "next_menu_id": 4,
+    "menus": [
+        {
+            "id": 1,
+            "name": "Shop",
+            "slug": "shop",
+            "items": [
+                {
+                    "id": "menu-1767593107321-443",
+                    "title": "Cuple Shoes Collection",
+                    "path": "#",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": [
+                        {
+                            "id": "menu-1767593198489-665",
+                            "title": "HeelSlippers",
+                            "path": "/category/heelslippers",
+                            "link_type": "link",
+                            "target_blank": false,
+                            "badge_text": null,
+                            "badge_color": "bg-danger",
+                            "mega_menu": 0,
+                            "mega_menu_type": "simple",
+                            "child": []
+                        },
+                        {
+                            "id": "menu-1767593198489-259",
+                            "title": "Heel Shoes",
+                            "path": "/category/heel-shoes",
+                            "link_type": "link",
+                            "target_blank": false,
+                            "badge_text": null,
+                            "badge_color": "bg-danger",
+                            "mega_menu": 0,
+                            "mega_menu_type": "simple",
+                            "child": []
+                        },
+                        {
+                            "id": "menu-1767593198489-523",
+                            "title": "Comfort",
+                            "path": "/category/comfort",
+                            "link_type": "link",
+                            "target_blank": false,
+                            "badge_text": null,
+                            "badge_color": "bg-danger",
+                            "mega_menu": 0,
+                            "mega_menu_type": "simple",
+                            "child": []
+                        },
+                        {
+                            "id": "menu-1767593198489-910",
+                            "title": "Sport",
+                            "path": "/category/sport",
+                            "link_type": "link",
+                            "target_blank": false,
+                            "badge_text": null,
+                            "badge_color": "bg-danger",
+                            "mega_menu": 0,
+                            "mega_menu_type": "simple",
+                            "child": []
+                        },
+                        {
+                            "id": "menu-1767593198489-140",
+                            "title": "Flat Shoes",
+                            "path": "/category/flat-shoes-0PBblE",
+                            "link_type": "link",
+                            "target_blank": false,
+                            "badge_text": null,
+                            "badge_color": "bg-danger",
+                            "mega_menu": 0,
+                            "mega_menu_type": "simple",
+                            "child": []
+                        },
+                        {
+                            "id": "menu-1767593198489-641",
+                            "title": "Flat Slipper",
+                            "path": "/category/flat-slipper-bVlt2j",
+                            "link_type": "link",
+                            "target_blank": false,
+                            "badge_text": null,
+                            "badge_color": "bg-danger",
+                            "mega_menu": 0,
+                            "mega_menu_type": "simple",
+                            "child": []
+                        }
+                    ]
+                },
+                {
+                    "id": "menu-1767593310185-523",
+                    "title": "Cuple Bags Collection",
+                    "path": "/category/bags",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767593388373-587",
+                    "title": "Cuple Boots",
+                    "path": "/category/boots",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                }
+            ],
+            "settings": {
+                "auto_add_new_top_level_pages": false
+            },
+            "locations": [
+                "primary"
+            ],
+            "created_at": "2026-01-04 08:10:51",
+            "updated_at": "2026-01-05 06:30:48"
+        },
+        {
+            "id": 2,
+            "name": "Useful Links",
+            "slug": "useful-links",
+            "items": [
+                {
+                    "id": "menu-1767595494967-998",
+                    "title": "Our Collections",
+                    "path": "/collections",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767595524225-561",
+                    "title": "Offers",
+                    "path": "/offers",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767595552197-925",
+                    "title": "Search",
+                    "path": "/search",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767595648841-557",
+                    "title": "Store Location",
+                    "path": "/store-location",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767595896383-134",
+                    "title": "About Us",
+                    "path": "/about-us",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                }
+            ],
+            "settings": {
+                "auto_add_new_top_level_pages": false
+            },
+            "locations": [
+                "footer_useful"
+            ],
+            "created_at": "2026-01-05 06:38:59",
+            "updated_at": "2026-01-05 08:59:07"
+        },
+        {
+            "id": 3,
+            "name": "Help Center",
+            "slug": "help-center",
+            "items": [
+                {
+                    "id": "menu-1767603723376-321",
+                    "title": "My Account",
+                    "path": "/account/dashboard",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767603802123-367",
+                    "title": "My Orders",
+                    "path": "/account/order",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767603849672-501",
+                    "title": "Wishlist",
+                    "path": "/wishlist",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767603897211-571",
+                    "title": "Tracking Order",
+                    "path": "/tracking-order",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767604002950-850",
+                    "title": "Exchange and Refund",
+                    "path": "/exchange-and-refund",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767604024451-262",
+                    "title": "FAQ's",
+                    "path": "/faq",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                },
+                {
+                    "id": "menu-1767604045448-233",
+                    "title": "Contact Us",
+                    "path": "/contact-us",
+                    "link_type": "link",
+                    "target_blank": false,
+                    "badge_text": null,
+                    "badge_color": "bg-danger",
+                    "mega_menu": 0,
+                    "mega_menu_type": "simple",
+                    "child": []
+                }
+            ],
+            "settings": {
+                "auto_add_new_top_level_pages": false
+            },
+            "locations": [
+                "footer_help"
+            ],
+            "created_at": "2026-01-05 09:01:39",
+            "updated_at": "2026-01-05 09:09:47"
+        }
+    ],
+    "locations": {
+        "primary": 1,
+        "footer_useful": 2,
+        "footer_help": 3
+    },
+    "meta": {
+        "created_at": "2026-01-01T00:00:00+00:00",
+        "updated_at": "2026-01-05 09:09:47"
+    }
+}

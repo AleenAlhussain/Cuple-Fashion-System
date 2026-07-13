@@ -1,0 +1,15 @@
+import { useTranslation } from "react-i18next";
+import CheckBoxField from "@/components/inputFields/CheckBoxField";
+import MultiSelectField from "@/components/inputFields/MultiSelectField";
+
+const Categories2Tab = ({ values, setFieldValue, categoryData, productData }) => {
+  const { t } = useTranslation("common");
+
+  return (
+    <>
+      <MultiSelectField values={values} setFieldValue={setFieldValue} name="categories2" title="Categories" data={categoryData} />
+      <CheckBoxField name={`[content][categories_2][status]`} title="Status" />
+    </>
+  );
+};
+export default Categories2Tab;

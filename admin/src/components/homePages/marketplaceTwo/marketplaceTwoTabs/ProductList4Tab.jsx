@@ -1,0 +1,30 @@
+import CheckBoxField from "@/components/inputFields/CheckBoxField";
+import SearchableSelectInput from "@/components/inputFields/SearchableSelectInput";
+import SimpleInputField from "@/components/inputFields/SimpleInputField";
+import { useTranslation } from "react-i18next";
+
+const ProductList4Tab = ({ productData, setSearch}) => {
+  const { t } = useTranslation( "common");
+
+  return (
+    <>
+      <SimpleInputField nameList={[{ name: `[content][products_list_4][title]`, placeholder: t("EnterTitle"), title: "Title" }]} />
+      <SearchableSelectInput
+        nameList={[
+          {
+            name: "productList4Product",
+            title: "Products",
+            inputprops: {
+              name: "productList4Product",
+              id: "productList4Product",
+              options: productData || [],
+              setsearch: setSearch,
+            },
+          },
+        ]}
+      />
+      <CheckBoxField name={`[content][products_list_4][status]`} title="Status" />
+    </>
+  );
+};
+export default ProductList4Tab;
